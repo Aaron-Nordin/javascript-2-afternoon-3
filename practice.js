@@ -122,6 +122,10 @@ contains(names, 'Colt', function(result){
 */
 
 //Code Here
+function uniq(arr, cb) {
+  let tempArr = [...new Set(arr)]
+  cb(tempArr)
+}
 
 // Do not edit the code below.
 uniq(names, function(uniqArr){
@@ -139,6 +143,12 @@ uniq(names, function(uniqArr){
 */
 
 //Code Here 
+function each(arr, cb) {
+  for (let i in arr){
+    cb(arr[i], i)
+    console.log(cb)
+  }
+}
 
 // Do not edit the code below.
 each(names, function(item, indice){
@@ -156,6 +166,19 @@ each(names, function(item, indice){
 */
 
 // Code here
+function getUserById(users, id, cb) {
+  // for(const object in users) {
+  //   if(object.id == id){
+  //     cb(object)
+  //   }
+  // }
+  for (let i = 0; i < users.length; i++) {
+    const element = users[i].id;
+    if (element === id) {
+      cb(users[i])
+    }
+  }
+}
 
 // Do not edit the code below.
 var users = [
