@@ -144,9 +144,8 @@ uniq(names, function(uniqArr){
 
 //Code Here 
 function each(arr, cb) {
-  for (let i in arr){
-    cb(arr[i], i)
-    console.log(cb)
+  for (let i = 0; i < arr.length; i++) {
+    cb(arr[i].name, i)
   }
 }
 
